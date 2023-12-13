@@ -1,0 +1,18 @@
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'header/header.css' %}">
+{% endblock %}
+
+<header>
+  <div class="header-container">
+    <div class="logo-style">
+      {% include 'client/logo.html' %}
+    </div>
+    <div class="header-icon">
+      <a href="{% url 'deconnexion' %}">
+         <img src="{% static 'images/logout.svg' %}" alt="header-icon">
+      </a>
+    </div>
+  </div>
+</header>

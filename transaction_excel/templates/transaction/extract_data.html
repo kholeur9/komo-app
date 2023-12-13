@@ -1,0 +1,26 @@
+{% extends "django_project/base.html" %}
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="{% static 'transaction/transaction.css' %}">
+{% endblock %}
+
+{% block title %}
+  Transaction Excel
+{% endblock %}
+
+{% block content %}
+  <h1 class="title">Administration</h1>
+  <form enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+
+    <!--<label for="{{ form.extract_data.id_for_label }}" >
+      <span class="material-symbols-outlined">
+      upload_file
+      </span>
+      Choisir votre fichier excel
+    </label> -->
+    {{ form }}
+  </form>
+{% endblock %}

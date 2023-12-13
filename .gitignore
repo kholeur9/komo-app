@@ -1,0 +1,6 @@
+# Environnement virtuel
+venv
+
+# DataBase
+db
+.sqlite3

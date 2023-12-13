@@ -1,0 +1,37 @@
+{% extends "django_project/base.html" %}
+{% load static %}
+
+{% block title %}
+  KOMO1 / Client
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'index/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  
+  <div class="header">
+    {% include 'django_project/header.html' %}
+  </div>
+   
+  <div class="barre"></div>
+
+  <section class="section">
+  <div class="box-info">
+    <div class="box-info-number">
+      <span class="title">Numéro -</span>
+      <span class="sub-title">
+          {{ numero_client.numero }}
+      </span>
+      </div>
+      <div class="box-info-credit">
+        <span class="title">- Crédit</span>
+        <span>{{numero_client.total_credit }}</span>
+      </div>
+  </div>
+  </section>
+    
+</div>
+{% endblock %}
